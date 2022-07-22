@@ -14,10 +14,10 @@ public class Types {
 			System.out.println("Leap year");
 		}
 		else{
-			System.out.println("not a Leap year");
+			System.out.println("Not a Leap year");
 		}                                                                                                                                        
 		
-		System.out.println("enter two nos.");
+		System.out.println("Enter two Numbers");
 		int FirstNum=sc.nextInt();
 		int SecondNum=sc.nextInt();
 		int n=FirstNum>SecondNum? FirstNum:SecondNum;
