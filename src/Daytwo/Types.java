@@ -8,13 +8,13 @@ public class Types {
 		System.out.println("enter year");
 		int y=sc.nextInt();
 		if(y%400==0){
-			System.out.println("leap year");
+			System.out.println("Leap year");
 		}
 		else if(y%4==0 && y%100!=0){
-			System.out.println("leap year");
+			System.out.println("Leap year");
 		}
 		else{
-			System.out.println("not a leap year");
+			System.out.println("not a Leap year");
 		}                                                                                                                                        
 		
 		System.out.println("enter two nos.");
