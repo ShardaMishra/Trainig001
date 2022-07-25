@@ -5,19 +5,19 @@ public class Types {
 	public static void main(String[] args) {
 		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("enter year");
+		System.out.println("Enter year");
 		int y=sc.nextInt();
 		if(y%400==0){
-			System.out.println("leap year");
+			System.out.println("Leap Year");
 		}
 		else if(y%4==0 && y%100!=0){
-			System.out.println("leap year");
+			System.out.println("Leap Year");
 		}
 		else{
-			System.out.println("not a leap year");
+			System.out.println("Not a Leap year");
 		}                                                                                                                                        
 		
-		System.out.println("enter two nos.");
+		System.out.println("Enter two Numbers");
 		int FirstNum=sc.nextInt();
 		int SecondNum=sc.nextInt();
 		int n=FirstNum>SecondNum? FirstNum:SecondNum;
