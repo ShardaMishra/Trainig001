@@ -23,15 +23,15 @@ public class Driver {
 			System.out.println(person);
 			break;
 		case 5:
-			Customer customer1 = new Customer("Sharda");
-			customer1.setMember (true);
-			customer1.setMemberType  ("Premium");
-			Visit visit1 = new Visit(customer1, new Date());
-			visit1.setProductExpense(4.5);
-			visit1.setServiceExpense(8.5);
-			visit1.setProductExpense(1.5);
-			System.out.println(visit1.toString());
-			System.out.println("Total expense made by " + visit1.getCustomerName() + " = $" + visit1.getTotalExpense());
+			Customer customer = new Customer("Sharda");
+			customer.setMember(true);
+			customer.setMemberType("Premium");
+			Visit visit = new Visit(customer, new Date());
+			visit.setProductExpense(4.5);
+			visit.setServiceExpense(8.5);
+			visit.setProductExpense(1.5);
+			System.out.println(visit.toString());
+			System.out.println("Total expense made by " + visit.getCustomerName() + " = $" + visit.getTotalExpense());
 			break;
 		default:
 			System.out.println("Enter valid program number //");

@@ -1,5 +1,11 @@
 package com.josh.java.training.assignment.oops.q5;
 
+import lombok.Data;
+
+//imported data class to implement setter and getter method
+@Data
+
+//this is the super class of staff class and student class
 public class Customer {
 
 	private String name;
@@ -8,26 +14,6 @@ public class Customer {
 
 	public Customer(String name) {
 		this.name = name;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public boolean isMember() {
-		return member;
-	}
-
-	public void setMember(boolean member) {
-		this.member = member;
-	}
-
-	public String getMemberType() {
-		return memberType;
-	}
-
-	public void setMemberType(String memberType) {
-		this.memberType = memberType;
 	}
 
 	@Override

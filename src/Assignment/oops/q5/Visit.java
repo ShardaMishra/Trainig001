@@ -1,32 +1,27 @@
 package com.josh.java.training.assignment.oops.q5;
 
 import java.util.Date;
+import lombok.Data;
+//imported data class to implement setter and getter method
 
+@Data
 public class Visit {
-	private Customer name;
+	private Customer c;
 	private Date date;
 	private double serviceExpense;
 	private double productExpense;
 
-	public Visit(Customer name, Date date) {
-		this.name = name;
+	public Visit(Customer c, Date date) {
+		this.c = c;
 		this.date = date;
 	}
 
 	public String getCustomerName() {
-		return name.getName();
-	}
-
-	public double getServiceExpense() {
-		return serviceExpense;
+		return c.getName();
 	}
 
 	public void setServiceExpense(double serviceExpense) {
 		this.serviceExpense = this.serviceExpense + serviceExpense;
-	}
-
-	public double getProductExpense() {
-		return productExpense;
 	}
 
 	public void setProductExpense(double productExpense) {
@@ -34,15 +29,15 @@ public class Visit {
 	}
 
 	public double getTotalExpense() {
-		return (serviceExpense - (serviceExpense * DiscountRate.getServiceDiscountRate(name.getMemberType())))
-				+ (productExpense - (productExpense * DiscountRate.getProductDiscountRate(name.getMemberType())));
+		return (serviceExpense - (serviceExpense * DiscountRate.getServiceDiscountRate(c.getMemberType())))
+				+ (productExpense - (productExpense * DiscountRate.getProductDiscountRate(c.getMemberType())));
 
 	}
 
 	@Override
 	public String toString() {
-		return "Visit{" + "customer name=" + name.getName() + ", customer member=" + name.isMember()
-				+ ", customer member type=" + name.getMemberType() + ", date=" + date + ", serviceExpense=$"
+		return "Visit{" + "customer name=" + c.getName() + ", customer member=" + c.isMember()
+				+ ", customer member type=" + c.getMemberType() + ", date=" + date + ", serviceExpense=$"
 				+ serviceExpense + ", productExpense=$" + productExpense + '}';
 	}
 }

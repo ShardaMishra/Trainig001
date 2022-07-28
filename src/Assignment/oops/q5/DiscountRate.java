@@ -2,34 +2,36 @@ package com.josh.java.training.assignment.oops.q5;
 
 public class DiscountRate {
 
-	private final static double serviceDiscountPremium = 0.2;
-	private final static double serviceDiscountGold = 0.15;
-	private final static double serviceDiscountSilver = 0.1;
-	private final static double productDiscountPremium = 0.1;
-	private final static double productDiscountGold = 0.1;
-	private final static double productDiscountSilver = 0.1;
+	private final static double SERVICEDISCOUNTPREMIUM = 0.2;
+	private final static double SERVICEDISCOUNTGOLD = 0.15;
+	private final static double SERVICEDISCOUNTSILVER = 0.1;
+	private final static double PRODUCTDISCOUNTPREMIUM = 0.1;
+	private final static double PRODUCTDISCOUNTGOLD = 0.1;
+	private final static double PRODUCTDISCOUNTSILVER = 0.1;
 
+	// This method returns the value of service discount rate
 	public static double getServiceDiscountRate(String type) {
 		switch (type) {
 		case "Premium":
-			return serviceDiscountPremium;
+			return SERVICEDISCOUNTPREMIUM;
 		case "Gold":
-			return serviceDiscountGold;
+			return SERVICEDISCOUNTGOLD;
 		case "Silver":
-			return serviceDiscountSilver;
+			return SERVICEDISCOUNTSILVER;
 		default:
 			return 0.0;
 		}
 	}
 
+	// This method returns the value of product discount rate
 	public static double getProductDiscountRate(String type) {
 		switch (type) {
 		case "Premium":
-			return productDiscountPremium;
+			return PRODUCTDISCOUNTPREMIUM;
 		case "Gold":
-			return productDiscountGold;
+			return PRODUCTDISCOUNTGOLD;
 		case "Silver":
-			return productDiscountSilver;
+			return PRODUCTDISCOUNTSILVER;
 		default:
 			return 0.0;
 		}
