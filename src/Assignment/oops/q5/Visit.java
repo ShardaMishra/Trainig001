@@ -6,18 +6,18 @@ import lombok.Data;
 
 @Data
 public class Visit {
-	private Customer c;
+	private Customer customer;
 	private Date date;
 	private double serviceExpense;
 	private double productExpense;
 
-	public Visit(Customer c, Date date) {
-		this.c = c;
+	public Visit(Customer customer, Date date) {
+		this.customer = customer;
 		this.date = date;
 	}
 
 	public String getCustomerName() {
-		return c.getName();
+		return customer.getName();
 	}
 
 	public void setServiceExpense(double serviceExpense) {
@@ -29,15 +29,15 @@ public class Visit {
 	}
 
 	public double getTotalExpense() {
-		return (serviceExpense - (serviceExpense * DiscountRate.getServiceDiscountRate(c.getMemberType())))
-				+ (productExpense - (productExpense * DiscountRate.getProductDiscountRate(c.getMemberType())));
+		return (serviceExpense - (serviceExpense * DiscountRate.getServiceDiscountRate(customer.getMemberType())))
+				+ (productExpense - (productExpense * DiscountRate.getProductDiscountRate(customer.getMemberType())));
 
 	}
 
 	@Override
 	public String toString() {
-		return "Visit{" + "customer name=" + c.getName() + ", customer member=" + c.isMember()
-				+ ", customer member type=" + c.getMemberType() + ", date=" + date + ", serviceExpense=$"
+		return "Visit{" + "customer name=" + customer.getName() + ", customer member=" + customer.isMember()
+				+ ", customer member type=" + customer.getMemberType() + ", date=" + date + ", serviceExpense=$"
 				+ serviceExpense + ", productExpense=$" + productExpense + '}';
 	}
 }
