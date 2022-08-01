@@ -9,7 +9,7 @@ public class DiscountRate {
 	private final static double PRODUCT_DISCOUNT_GOLD = 0.1;
 	private final static double PRODUCT_DISCOUNT_SILVER = 0.1;
 
-	// This method returns the value of service discount rate
+	/* This method returns the value of service discount rate*/
 	public static double getServiceDiscountRate(String type) {
 		switch (type) {
 		case "Premium":
@@ -23,7 +23,7 @@ public class DiscountRate {
 		}
 	}
 
-	// This method returns the value of product discount rate
+	/* This method returns the value of product discount rate*/
 	public static double getProductDiscountRate(String type) {
 		switch (type) {
 		case "Premium":
