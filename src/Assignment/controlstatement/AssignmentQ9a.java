@@ -13,10 +13,6 @@ public class AssignmentQ9a {
 				System.out.print("#");
 			}
 			System.out.println();
-
 		}
-
-
 	}
-
 }
