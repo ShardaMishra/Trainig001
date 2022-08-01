@@ -1,6 +1,6 @@
 package com.josh.java.training.exceptionhandling;
 
-public class NotWorkingException extends RuntimeException{
+public class NoEntryException extends RuntimeException{
 	NotWorkingException(String msg){
 		super(msg);
 	}
