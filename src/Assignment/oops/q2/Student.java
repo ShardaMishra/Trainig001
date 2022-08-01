@@ -2,8 +2,9 @@ package com.josh.java.training.assignment.oops.q2;
 
 import lombok.Data;
 
-//imported data class to implement setter and getter method
+
 @Data
+@tostring(callsuper=true)
 public class Student extends Person {
 	private String program;
 	private int year;
@@ -16,9 +17,4 @@ public class Student extends Person {
 		this.fee = fee;
 	}
 
-	@Override 
-	public String toString() {
-		return "Student[Person [name=" + super.getName() + ", address=" + super.getAddress() + "[name=" + this.getName() + ", address=" + getAddress() + "program=" + program + ", year=" + year
-				+ ", fee=" + fee + "]";
-	}
 }
