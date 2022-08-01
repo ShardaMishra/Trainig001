@@ -2,7 +2,7 @@ package Assignment;
 
 class QuickSort
 {
-	public static void Sort(int[] a,int start,int end)
+	public static void sort(int[] a,int start,int end)
 	{
 		if(start>=end) return;
 		int pivot=a[(start+end)/2];
@@ -21,8 +21,8 @@ class QuickSort
 			
 		}
 		
-		Sort(a,start,j);
-		Sort(a,i,end);
+		sort(a,start,j);
+		sort(a,i,end);
 	}
 
 
@@ -30,7 +30,7 @@ public class Assignment_Q17 {
 	public static void main(String[] args) {
 		
 		int[] a= {5,3,8,9,1,2};
-		Sort(a,0,a.length-1);
+		sort(a,0,a.length-1);
 		for(int n:a) System.out.println(n);
 	}
 	}
