@@ -17,7 +17,7 @@ public class DaySeven {
 		
 		int age=20;
 		if(age<25) {
-			NotWorkingException c=new NotWorkingException("Kid not allowed");
+			NoEntryException c=new NoEntryException("Kid not allowed");
 			throw c;
 		}
 		else {
