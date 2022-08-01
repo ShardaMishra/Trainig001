@@ -1,7 +1,7 @@
 package com.josh.java.training.exceptionhandling;
 
 public class NoEntryException extends RuntimeException{
-	NotWorkingException(String msg){
+	NoEntryException(String msg){
 		super(msg);
 	}
 }
