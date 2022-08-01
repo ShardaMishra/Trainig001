@@ -33,11 +33,4 @@ public class Visit {
 				+ (productExpense - (productExpense * DiscountRate.getProductDiscountRate(customer.getMemberType())));
 
 	}
-
-	@Override
-	public String toString() {
-		return "Visit{" + "customer name=" + customer.getName() + ", customer member=" + customer.isMember()
-				+ ", customer member type=" + customer.getMemberType() + ", date=" + date + ", serviceExpense=$"
-				+ serviceExpense + ", productExpense=$" + productExpense + '}';
-	}
 }
