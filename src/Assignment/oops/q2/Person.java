@@ -2,7 +2,6 @@ package com.josh.java.training.assignment.oops.q2;
 
 import lombok.Data;
 
-//imported data class to implement setter and getter method
 @Data
 public class Person {
 	private String name;
