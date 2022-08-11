@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class FileCreation {
 	public static void main(String[] args) {
-
+		Scanner Reader = null;
 		try {
 			File Obj = new File("myfile.txt");
 
@@ -26,12 +26,12 @@ public class FileCreation {
 			System.out.println("Successfully written.");
 
 			// read a file
-			Scanner Reader = new Scanner(Obj);
+			Reader = new Scanner(Obj);
 			while (Reader.hasNextLine()) {
 				String data = Reader.nextLine();
 				System.out.println(data);
 			}
-			Reader.close();
+
 			/*
 			 * if (Obj.delete()) { System.out.println("The deleted file is : " +
 			 * Obj.getName()); } else { System.out.println( "Failed in deleting the file.");
@@ -40,7 +40,10 @@ public class FileCreation {
 		} catch (IOException e) {
 			System.out.println("An error has occurred.");
 			e.printStackTrace();
+		} finally {
+			Reader.close();
 		}
 
 	}
 }
+
