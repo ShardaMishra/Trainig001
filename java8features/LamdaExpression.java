@@ -1,6 +1,7 @@
 package com.josh.java.training.java8features;
 
-import java.awt.*;
+import java.awt.Button;
+import java.awt.Frame;
 
 public class LamdaExpression {
 	public static void main(String[] args) {
