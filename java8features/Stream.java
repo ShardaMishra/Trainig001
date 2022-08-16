@@ -10,11 +10,8 @@ public class Stream {
 		names.add("Subhra");
 		names.add("Gireesh");
 		names.add("Sharda");
-		int count = 0;
-		for (String str : names) {
-			if (str.length() < 6)
-				count++;
-		}
+
+		long count = names.stream().filter(str -> str.length() > 5).count();
 		System.out.println("There are " + count + " strings with length less than 6");
 	}
 
